@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "duolingo",
+            "cwd": "duolingo",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "duolingo (profile mode)",
+            "cwd": "duolingo",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "duolingo (release mode)",
+            "cwd": "duolingo",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

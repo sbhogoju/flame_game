@@ -15,7 +15,7 @@ class ScrollWidget2 extends StatelessWidget {
         itemBuilder: (context, index) {
           return Container(
             height: 50,
-            color: const Color.fromARGB(255, 68, 255, 109),
+            color: const Color.fromARGB(255, 158, 255, 68),
             child: Text("Element $index"),
           );
         },

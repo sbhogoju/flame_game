@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:duolingo/components/home/home.dart';
 import 'package:duolingo/components/login.dart';
+import 'package:duolingo/overlays/full_screen.dart';
 import 'package:duolingo/overlays/scroll_one.dart';
 import 'package:duolingo/overlays/scroll_two.dart';
 import 'package:duolingo/sprites.dart';
@@ -20,7 +21,10 @@ void main() {
       return const ScrollWidget2(
         key: Key("1"),
       );
-    }
+    },
+    'menu2': (BuildContext context, DuolingoGame game) {
+      return FullScreenSheet(key: const Key("2"), game: game);
+    },
   }));
 }
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:popover/popover.dart';
 
 class ScrollWidget extends StatelessWidget {
   const ScrollWidget({super.key});
@@ -12,11 +13,25 @@ class ScrollWidget extends StatelessWidget {
           return const Divider();
         },
         itemCount: 30,
-        itemBuilder: (context, index) {
-          return Container(
-            height: 50,
-            color: Colors.blueAccent,
-            child: Text("Element $index"),
+        itemBuilder: (ctx, index) {
+          return GestureDetector(
+            onTap: () {
+              // showPopover(
+              //   context: context,
+              //   bodyBuilder: (context) => const Text('Im inside popover'),
+              //   onPop: () => print('Popover was popped!'),
+              //   direction: PopoverDirection.top,
+              //   width: 200,
+              //   height: 400,
+              //   arrowHeight: 15,
+              //   arrowWidth: 30,
+              // );
+            },
+            child: Container(
+              height: 50,
+              color: Colors.blueAccent,
+              child: Text("Element $index"),
+            ),
           );
         },
       ),

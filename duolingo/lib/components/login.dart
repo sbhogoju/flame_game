@@ -3,8 +3,6 @@ import 'dart:async';
 import 'package:duolingo/main.dart';
 import 'package:flame/components.dart';
 import 'package:flame/events.dart';
-import 'package:flame/game.dart';
-import 'package:flame/input.dart';
 import 'package:flutter/material.dart' hide Route;
 
 class LoginComponent extends Component
@@ -13,12 +11,12 @@ class LoginComponent extends Component
   bool containsLocalPoint(Vector2 point) => true;
 
   @override
-  void onTapUp(TapUpEvent event) => game.router.pushNamed('home');
+  void onTapUp(TapUpEvent event) => game.router.pushReplacementNamed('home');
 
   @override
   FutureOr<void> onLoad() {
     addAll([
-      Background(Color.fromARGB(255, 93, 82, 165)),
+      Background(const Color.fromARGB(255, 93, 82, 165)),
       TextComponent(
         text: 'Login',
         anchor: Anchor.center,

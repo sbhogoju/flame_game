@@ -9,7 +9,8 @@ import 'package:flame/input.dart';
 
 //// TOP BAR
 
-class TopBar extends PositionComponent with TapCallbacks {
+class TopBar extends PositionComponent
+    with TapCallbacks, HasGameRef<DuolingoGame> {
   TopBar({super.position});
   @override
   void render(Canvas canvas) {
@@ -21,6 +22,9 @@ class TopBar extends PositionComponent with TapCallbacks {
     add(PositionComponent(children: [
       SpriteButtonComponent(
           position: Vector2(50, 150),
+          onPressed: () {
+            game.overlays.add('menu2');
+          },
           size: Vector2(100, 100),
           button: duolingoSprite(MySprites.play),
           buttonDown: duolingoSprite(MySprites.playPressed)),
